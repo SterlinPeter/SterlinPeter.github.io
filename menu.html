@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+     <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <title>Chocolate House</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a href="#!" id = "login">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" id="loginClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label offset-1" for="exampleInputEmail3">Email address</label>
+                            <div class="col-md-4">
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label offset-1" for="exampleInputPassword3">Password</label>
+                            <div class="col-md-4">
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="form-check offset-3">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row align justify-content-center">
+                            <button type="button" class="btn btn-secondary btn-sm mr-1" id="loginCancel">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm btn1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Chocolate House</h1>
+                    <p class="justify">Baked with the best ingredients!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="./img/regular-cakes-black-forest-tasty-tweets.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <div class="row row-header">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">Menu</li>
+            </ol>
+            <div class="col-12 col-sm">
+               <h3>Menu</h3>
+               <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-sm col-md-6">
+                <div>
+                    <h3>
+                        Pastries
+                    </h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/PineapplePastry_grande.jpg" alt="PineapplePastry_grande" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Pineapple Pastry </h2>
+                            <p>&#8377; 25</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Pineapple Pastry',25)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/red-velvet-pastry-500x500.png" alt="red-velvet-pastry" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Red Velvet </h2>
+                            <p>&#8377; 30</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Red Velvet',30)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/strawberrypastry.jpg" alt="strawberry_pastry" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Strawberry Pastry </h2>
+                            <p>&#8377; 45</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Strawberry Pastry',45)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/tempting-truffle-pastry-6-pcs_1.jpg" alt="truffle_pastry" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Truffle Pastry </h2>
+                            <p>&#8377; 30</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Truffle Pastry',30)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/butterscotch pastry-600x600.jpg" alt="butterscoth_pastry" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Butterscotch Pastry </h2>
+                            <p>&#8377; 25</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Butterscotch Pastry',25)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/chocolate-pastry-01-A.jpg" alt="chocolate-pastry" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Chocolate Pastry </h2>
+                            <p>&#8377; 40</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Chocolate Pastry',40)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <h3>
+                        Cakes
+                    </h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/ferrero_rochercake_main.jpg" alt="ferrero_rochercake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Ferror Rocher Cake </h2>
+                            <p>&#8377; 699</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Ferror Rocher Cake',699)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/regular-cakes-black-forest-tasty-tweets.jpg" alt="black_forest_cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Black Forest </h2>
+                            <p>&#8377; 549</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Black Forest',549)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/rich-chocolate-cakes.jpeg" alt="chocolate_cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Dark Chocolate Cake </h2>
+                            <p>&#8377; 599</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Dark Chocolate Cake',599)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/twotierCake.jpg" alt="Two_Tier_Cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Two-Tier Cake </h2>
+                            <p>&#8377; 999</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Two-Tier Cake',999)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/chocolatecake.jpg" alt="Chocolate_Cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Chocolate Cake </h2>
+                            <p>&#8377; 599</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Chocolate Cake',599)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/birthdaycake.png" alt="birthday_Cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Vanilla Cake </h2>
+                            <p>&#8377; 499</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Vanilla Cake',499)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <h3>
+                        Kids Specials
+                    </h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/kids-birthday-cake-mickey.jpg" alt="birthday-cake-mickey" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Mickey Mouse Cake </h2>
+                            <p>&#8377; 699</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Mickey Mouse Cake',699)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/Kung-Fu-Panda-Cakes_2-600x600.jpg" alt="Kung-Fu-Panda-Cakes" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Kungu Panda Cake </h2>
+                            <p>&#8377; 549</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Kungu Panda Cake',549)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/spider-man-kids-cake.jpg" alt="spider-man-kids-cake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Spider-Man Cake </h2>
+                            <p>&#8377; 599</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Spider-Man Cake',599)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="./img/tomandjerrycake.jpg" alt="tomandjerrycake" height="200" width="200">
+                        <div class="media-body">
+                            <h2 class="mt-0">Tom & Jerry Cake </h2>
+                            <p>&#8377; 599</p>
+                        </div>
+                        <div>
+                            <a href="#!" onclick="addItem('Tom & Jerry Cake',599)"><span class="fa fa-plus"></span> Add</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm col-md-6">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders">
+                        
+                    </tbody>
+                    <tfoot id="finalamt">
+                        <tr>
+                            <th>-</th>
+                            <td>Total</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button type="submit" class="btn btn-warning float-right btn2" onclick="clearTable()">Clear</button>
+                <button type="submit" class="btn btn-primary float-right btn2">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        202, Fergusson College Rd<br>
+                        Shivajinagar, Pune<br>
+                        Maharashtra<br>
+                        <i class="fa fa-phone fa-lg"></i>: +91 8974786775<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:chocohouse@food.net">Send us a mail</a>
+                     </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2015 Chocolate House</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <!-- build:js js/main.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/addItems.js"></script>
+    <!-- endbuild -->
+</body>
