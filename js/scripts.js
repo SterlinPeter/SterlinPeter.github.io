@@ -1,4 +1,4 @@
-$("#carouselButton").click(function(){
+$("#carouselButton").on("click", function(){
     if ($("#carouselButton").children("span").hasClass('fa-pause')) {
         $("#mycarousel").carousel('pause');
         $("#carouselButton").children("span").removeClass('fa-pause');
@@ -10,12 +10,23 @@ $("#carouselButton").click(function(){
         $("#carouselButton").children("span").addClass('fa-pause');                    
     }
 });
-$("#login").click(function(){
-$('#loginModal').modal('toggle');
+
+$("#login").on("click", function(){
+    $('#loginModal').modal('toggle');
 });
-$("#loginCancel").click(function(){
-$('#loginModal').modal('toggle');
+
+$("#loginCancel").on("click", function(){
+    $('#loginModal').modal('toggle');
 });
-$("#loginClose").click(function(){
-$('#loginModal').modal('toggle');
+
+$("#loginClose").on("click", function(){
+    $('#loginModal').modal('toggle');
+});
+
+$("#orderButton").on("click", function(){
+    $('#orderModal').modal('toggle');
+});
+
+$("#orderClose").on("click", function(){
+    $('#orderModal').modal('toggle');
 });

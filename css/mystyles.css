@@ -100,3 +100,8 @@ body {
 .modal-body {
   background-color: #81729c; 
 }
+
+.modal-text{
+  color: white;
+  text-align: center;
+}

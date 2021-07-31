@@ -72,6 +72,19 @@
             </div>
         </div>
     </div>
+    <div id="orderModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Order Status </h4>
+                    <button type="button" class="close" id="orderClose">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-text">Your order has been successfully submitted!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -307,7 +320,7 @@
                     </tfoot>
                 </table>
                 <button type="submit" class="btn btn-warning float-right btn2" onclick="clearTable()">Clear</button>
-                <button type="submit" class="btn btn-primary float-right btn2">Order</button>
+                <button type="submit" class="btn btn-primary float-right btn2" id="orderButton">Order</button>
             </div>
         </div>
     </div>
