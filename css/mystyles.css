@@ -105,3 +105,15 @@ body {
   color: white;
   text-align: center;
 }
+
+.mt-0{
+  font-size: 3vw;
+}
+
+.img-responsive{
+  width: 50%;
+}
+
+.text-adjust{
+  font-size: 4vw;
+}
